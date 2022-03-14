@@ -1,4 +1,4 @@
-# Contractive-Neural-ODEs
+# Contractive-Hamiltonian-Neural-ODEs
 PyTorch implementation of Contractive Hamiltonian Neural ODEs
 
 
