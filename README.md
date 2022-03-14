@@ -30,6 +30,7 @@ Contractive_neural_ODE_flow
 # Illustration 3
 
 <p align="center">
+  <img src="./Figures/Double_circles.png" alt="circles" width="400"/>
 <img src="./Figures/Grads_CHNODE.png" alt="GRADS" width="400"/>
 </p>
 
