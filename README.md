@@ -22,4 +22,14 @@ PyTorch implementation of Contractive Hamiltonian Neural ODEs
 Contractive_neural_ODE_flow
 # Illustration 2
 
+<p align="center">
+<img src="./Figures/MNIST.png" alt="MNIST" width="400"/>
+</p>
+
+
 # Illustration 3
+
+<p align="center">
+<img src="./Figures/Grads_CHNODE.png" alt="GRADS" width="400"/>
+</p>
+
