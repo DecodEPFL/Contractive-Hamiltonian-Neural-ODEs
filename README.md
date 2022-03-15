@@ -26,7 +26,8 @@ To show how contractivity promotes the robustness of a neual ODE, a comparison b
 
 Contractive_neural_ODE_flow
 ## Illustration 2
-We provide the comparison of CH-NODE with ResNets and H-DNNs. 
+We provide the comparison of CH-NODE with ResNets and H-DNNs. We use the complete MNIST dataset (60,000 training samples and 10,000 test samples), a mini-batch size of 100, and 10 epochs for the training. For the optimization algorithm, we use SGD with Adam \cite{kingma2015adam} and the cross-entropy loss. The learning rate, or optimization step size, is initialized to be 0.04 with a decay rate of 0.8 at each epoch.  
+
 
 <p align="center">
 <img src="./Figures/MNIST.png" alt="MNIST" width="400"/>
