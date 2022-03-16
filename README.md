@@ -10,15 +10,15 @@ PyTorch implementation of Contractive Hamiltonian Neural ODEs
 To show how contractivity promotes the robustness of a neual ODE, a comparison between a vanilla neural ODE  and a contractive Hamiltonian Neural ODE (CH-NODE) is provided.
 
 <p align="center">
-<img src="./Figures/Vanilla_neural_ode.png" alt="Class_vanilla" width="400"/>
-<img src="./Figures/vanilla_neural_ode_phaseplot.png" alt="flow_vanilla" width="400"/>
+<img src="./Figures/boundary_vanilla.png" alt="Class_vanilla" width="400"/>
+<img src="./Figures/Flow_contractive.png" alt="flow_vanilla" width="400"/>
 </p>
 
 
 
 <p align="center">
-<img src="./Figures/Classification_CHNNs.png" alt="class_CHNODE" width="400"/>
-<img src="./Figures/Contractive_neural_ODE_flow.png" alt="FLOW_CHNODE" width="400"/>
+<img src="./Figures/boundary_contractive.png" alt="class_CHNODE" width="400"/>
+<img src="./Figures/Flow_contractive.png" alt="FLOW_CHNODE" width="400"/>
 </p>
 
 
