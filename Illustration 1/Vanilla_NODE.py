@@ -23,6 +23,7 @@ global_max_epoches = 1000
 global_train_flag = True
 global_data_size = 6
 global_optimizer_lr = 5e-2
+torch.manual_seed(55)
 
 class TrainDataset(Dataset):
     def __init__(self, dataSize):
@@ -36,14 +37,14 @@ class TrainDataset(Dataset):
             MyLabel[i, :] = 0
             MyData[i, :] = torch.tensor(
                 [r*torch.cos(theta), r*torch.sin(theta)])
-            plt.plot(MyData[i, 0], MyData[i, 1], 'b*',markersize=10)
+            plt.plot(MyData[i, 0], MyData[i, 1], 'bx',markersize=12)
 
             MyLabel[i+int(dataSize/2), :] = 1
             MyData[i+int(dataSize/2), :] = torch.tensor(
                 [(r+2)*torch.cos(theta), (r+2)*torch.sin(theta)])
 
             plt.plot(MyData[i+int(dataSize/2), 0],
-                     MyData[i+int(dataSize/2), 1], 'ro', markersize=10)
+                     MyData[i+int(dataSize/2), 1], 'ro', markersize=12)
 
         number_of_samples = 50
         radius = 0.3
@@ -151,13 +152,17 @@ class swiss_roll_node(pl.LightningModule):
         radius = 0.3
         angle = 2*3.14*torch.linspace(0, 1, number_of_samples)
         for i in range(0, len(data), 1):
-            plt.plot(data[i, 0], data[i, 1], '+')
+            if label[i] == 0:
+                plt.plot(data[i, 0], data[i, 1], 'bx',markersize = 5)
+            if label[i] == 1:
+                plt.plot(data[i, 0], data[i, 1], 'ro',markersize = 5)
+            # plt.plot(data[i, 0], data[i, 1], '+')
 
             sample = data[i]+torch.stack([radius*torch.cos(angle),
                                           radius*torch.sin(angle)]).T
-            plt.plot(sample[:, 0], sample[:, 1], 'b--')
+            plt.plot(sample[:, 0], sample[:, 1], '--',color = 'purple')
             traj = self.node_propagation(sample)
-            plt.plot(traj[-1, :, 0], traj[-1, :, 1], 'r--')
+            plt.plot(traj[-1, :, 0], traj[-1, :, 1], '--',color = 'orange')
 
         # plot the classification boundary
         delta = 0.025
@@ -195,6 +200,8 @@ class swiss_roll_node(pl.LightningModule):
         plt.quiver(xv, yv, u, v, color='grey')
         plt.xticks([])
         plt.yticks([])
+        plt.xlim([-12.5, 13])
+        plt.ylim([-5, 7])
 
         plt.savefig('node_propatation_neural_ODE.pdf')
 

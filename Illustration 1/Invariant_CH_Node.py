@@ -24,14 +24,14 @@ def swiss_roll(dataSize, nf=2, noise_std=0, input_ch=None):
         MyLabel[i, :] = 0
         MyData[i, 0, 0] = r*torch.cos(theta)
         MyData[i,1,0]   = r*torch.sin(theta)
-        plt.plot(MyData[i, 0, 0], MyData[i, 1, 0], 'b*',markersize = 10)
+        plt.plot(MyData[i, 0, 0], MyData[i, 1, 0], 'bx',markersize = 12)
 
         MyLabel[i+int(dataSize/2), :] = 1
         MyData[i+int(dataSize/2), 0, 0] = (r+2)*torch.cos(theta)
         MyData[i+int(dataSize/2), 1, 0] = (r+2)*torch.sin(theta)
 
         plt.plot(MyData[i+int(dataSize/2), 0, 0],
-                    MyData[i+int(dataSize/2), 1, 0], 'ro',markersize = 10)
+                    MyData[i+int(dataSize/2), 1, 0], 'ro',markersize = 12)
 
 
     domain = [-1.2*4.0, 1.2*4.0, -1.2*4.0, 1.2*4.0]
@@ -227,7 +227,7 @@ def train_2d_example(dataset='swiss_roll', net_type='H1', nf=4, n_layers=8, t_en
     alpha = 0.1e-4
     alphac = 0.1e-4
     learning_rate = 0.5e-1
-    max_iteration = 50
+    max_iteration = 60
     max_in_iteration = 30
 
     # define network structure and optimizer
@@ -331,7 +331,7 @@ if __name__ == '__main__':
     parser.add_argument('--nf', type=int, default= 2)
     parser.add_argument('--net_type', type=str, default='H1')
     parser.add_argument('--n_layers', type=int, default= 4)
-    parser.add_argument('--t_end', type=float, default= 0.025)
+    parser.add_argument('--t_end', type=float, default= 0.03)
     parser.add_argument('--gradient_info', type=bool, default=True)
     args = parser.parse_args()
 
@@ -360,13 +360,17 @@ if __name__ == '__main__':
     radius = 0.3
     angle = 2*3.14*torch.linspace(0, 1, number_of_samples)
     for i in range(0, len(data2d), 1):
-        plt.plot(data2d[i, 0, 0], data2d[i, 1, 0], '+',color = 'black')
+        if label[i] == 1.0:                                   
+            plt.plot(data2d[i, 0, 0], data2d[i, 1, 0], 'ro', markersize = 10)
+        else:
+            plt.plot(data2d[i, 0, 0], data2d[i, 1, 0], 'bx', markersize = 10)
+        
 
         sample = data2d[i].view(2) + torch.stack([radius*torch.cos(angle),
                                              radius*torch.sin(angle)]).T
-        plt.plot(sample[:, 0], sample[:, 1], 'b--')
+        plt.plot(sample[:, 0], sample[:, 1], '--', color = 'purple')
         YN = model(sample).detach()
-        plt.plot(YN[:, 0], YN[:, 1], 'r--')
+        plt.plot(YN[:, 0], YN[:, 1], '--', color = 'orange')
         
 
       # plot the classification boundary
