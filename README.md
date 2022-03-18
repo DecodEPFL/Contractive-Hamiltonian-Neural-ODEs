@@ -7,7 +7,7 @@ PyTorch implementation of Contractive Hamiltonian Neural ODEs
 
 
 ## Illustration 1
-To show how contractivity promotes the robustness of a neual ODE, a comparison between a vanilla neural ODE  and a contractive Hamiltonian Neural ODE (CH-NODE) is provided. We can see that classifier for a vanilla ODE has less margins (top-left) as compared to a CH-NODE (bottom-left). Moreover, from the perturbation analysis, for the vanilla ODE (top-right), we can see that a small ball (purple ball) around a nominal train poits maps to sets (organge ellipsoids) that may cross the decision hyperplane and this mis-classify. On the other hand, for the CH-NODE, the orange sets remain on the one side of the hyperplabe (bottom-right). This explains that, indeed, contractive Neural ODEs are more robust as compared to vanilla ODEs.
+To show how contractivity promotes the robustness of a neual ODE, a comparison between a vanilla neural ODE  and a contractive Hamiltonian Neural ODE (CH-NODE) is provided. We can see that classifier for a vanilla ODE has less margins (top-left) as compared to a CH-NODE (bottom-left). Moreover, from the perturbation analysis, for the vanilla ODE (top-right), we can see that a small ball (purple ball) around a nominal train poits maps to sets (organge ellipsoids) that may cross the decision hyperplane and this mis-classify. On the other hand, for the CH-NODE, the orange sets remain on the one side of the hyperplabe (bottom-right). This explains that, indeed, contractive Neural ODEs are more robust than vanilla ODEs.
 
 <p align="center">
 <img src="./Figures/boundary_vanilla.png" alt="Class_vanilla" width="400"/>
@@ -26,7 +26,9 @@ To show how contractivity promotes the robustness of a neual ODE, a comparison b
 
 Contractive_neural_ODE_flow
 ## Illustration 2
-We provide the comparison of CH-NODE with ResNets and H-DNNs. We use the complete MNIST dataset (60,000 training samples and 10,000 test samples), a mini-batch size of 100, and 10 epochs for the training. For the optimization algorithm, we use SGD with Adam \cite{kingma2015adam} and the cross-entropy loss. The learning rate, or optimization step size, is initialized to be 0.04 with a decay rate of 0.8 at each epoch.  
+We provide the comparison of CH-NODE with ResNets and H-DNNs. 
+We used zero-mean White Gaussian and Salt and Pepper noise to corrupt 10,000 test images. Few iamges are shown below for the reference. 
+We use the complete MNIST dataset (60,000 training samples and 10,000 test samples), a mini-batch size of 100, and 10 epochs for the training. For the optimization algorithm, we use SGD with Adam \cite{kingma2015adam} and the cross-entropy loss. The learning rate, or optimization step size, is initialized to be 0.04 with a decay rate of 0.8 at each epoch.  
 
 
 <p align="center">
