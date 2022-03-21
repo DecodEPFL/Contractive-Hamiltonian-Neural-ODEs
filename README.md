@@ -4,7 +4,14 @@ PyTorch implementation of our paper "On Robust Classification using Contractive 
 
 ## Installation 
 
+The code requires the following packages: 
 
+1) torch
+2) pytorch_lightning
+3) numpy
+4) matplotlib
+5) scipy
+6) skimage
 
 
 
