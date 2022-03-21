@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-Train a H-DNN on MNIST dataset.
-Author: Clara Galimberti (clara.galimberti@epfl.ch)
+Train a Contractive Hamiltonian NN on MNIST dataset.
+Author: Muhammad Zakwan (muhammad.zakwan@epfl.ch)
 Usage:
-python run_MNIST.py          --net_type      [MODEL NAME]            \
+python Train_MNIST.py          --net_type      [MODEL NAME]            \
                              --n_layers      [NUMBER OF LAYERS]      \
                              --gpu           [GPU ID]
 Flags:
