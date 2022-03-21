@@ -1,8 +1,10 @@
 # Contractive-Hamiltonian-Neural-ODEs
-PyTorch implementation of Contractive Hamiltonian Neural ODEs
+PyTorch implementation of our paper "On Robust Classification using Contractive Hamiltonian Neural ODEs"
 
 
 ## Installation 
+
+
 
 
 
