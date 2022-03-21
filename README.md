@@ -32,8 +32,6 @@ To show how contractivity promotes the robustness of a neual ODE, a comparison b
 
 
 
-
-Contractive_neural_ODE_flow
 ## Illustration 2
 We provide the comparison of CH-NODE with residual networks (ResNets) and Hamiltonian deep neural networks (H-DNNs). We employed the following architecture
 
