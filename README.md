@@ -26,9 +26,16 @@ To show how contractivity promotes the robustness of a neual ODE, a comparison b
 
 Contractive_neural_ODE_flow
 ## Illustration 2
-We provide the comparison of CH-NODE with ResNets and H-DNNs. 
-We used zero-mean White Gaussian and Salt and Pepper noise to corrupt 10,000 test images. Few iamges are shown below for the reference. 
-We use the complete MNIST dataset (60,000 training samples and 10,000 test samples), a mini-batch size of 100, and 10 epochs for the training. For the optimization algorithm, we use SGD with Adam \cite{kingma2015adam} and the cross-entropy loss. The learning rate, or optimization step size, is initialized to be 0.04 with a decay rate of 0.8 at each epoch.  
+We provide the comparison of CH-NODE with residual networks (ResNets) and Hamiltonian deep neural networks (H-DNNs). We employed the following architecture
+
+<p align="center">
+<img src="./Figures/Architecture.png" alt="arch" width="400"/>
+</p>
+
+where the convolution layer maps from 1 to 8 channels and has a filter of size (3 x 3). Both the stride and the padding are set to 1 in the experiments. The output layer is chosen as softmax.
+
+We used zero-mean White Gaussian and Salt and Pepper noise to corrupt 10,000 test images. Few images are shown below for the reference. 
+We use the complete MNIST dataset (60,000 training samples and 10,000 test samples), a mini-batch size of 100, and 10 epochs for the training. For the optimization algorithm, we use SGD with Adam [1] and the cross-entropy loss. The learning rate, or optimization step size, is initialized to be 0.04 with a decay rate of 0.8 at each epoch.  
 
 
 <p align="center">
@@ -37,10 +44,13 @@ We use the complete MNIST dataset (60,000 training samples and 10,000 test sampl
 
 
 ## Illustration 3
-We demonstrate that our proposed CH-NODE enjoys non-exploding gradients properties by design. 
+We demonstrate that our proposed CH-NODE enjoys non-exploding gradients properties by design. The left figure shows the classification result for the double-circles dataset. The red and blue regions show the prediction of the classifier.  The right figure exhibits the 2-norm of the backward sensitivity matrix (BSM). 
 
 <p align="center">
   <img src="./Figures/Double_circles.png" alt="circles" width="400"/>
 <img src="./Figures/Grads_CHNODE.png" alt="GRADS" width="400"/>
 </p>
 
+### References
+
+[1] Kingma, D.P. and Ba, J., 2014. Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980.
