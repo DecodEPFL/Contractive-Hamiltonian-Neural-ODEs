@@ -36,7 +36,7 @@ where x is the input.
 
 <p align="center">
 <img src="./Figures/boundary_vanilla.png" alt="Class_vanilla" width="400"/>
-<img src="./Figures/Flow_contractive.png" alt="flow_vanilla" width="400"/>
+<img src="./Figures/flow_vanilla.png" alt="flow_vanilla" width="400"/>
 </p>
 
 
