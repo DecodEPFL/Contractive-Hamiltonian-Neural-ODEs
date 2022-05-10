@@ -20,8 +20,14 @@ To show how contractivity promotes the robustness of a neual ODE, a comparison b
 
 <p align="center">
 <img src="https://render.githubusercontent.com/render/math?math={\color{white} \xi(0) = \sigma(W_0 {x} %2B b_0) }"/>
-<img src="https://render.githubusercontent.com/render/math?math={\color{white} \dot{\xi}(t) = \sigma(W_1 {\xi}(t) %2B b_0) }"/>
- <img src="https://render.githubusercontent.com/render/math?math={\color{white}  y = \sigma(W {\xi}_T %2B b_1) }"/>
+</p>
+
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math={\color{white} \dot{\xi}(t) = \sigma(W {\xi}(t) %2B b) }"/>
+</p> 
+
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math={\color{white}  y(T) = \sigma(W_T {\xi}_T %2B b_T) }"/>
 </p>
 
 <p align="center">
