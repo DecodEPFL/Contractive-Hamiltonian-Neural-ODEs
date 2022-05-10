@@ -17,7 +17,8 @@ The code requires the following packages:
 
 ## Illustration 1
 To show how contractivity promotes the robustness of a neual ODE, a comparison between a vanilla neural ODE  and a contractive Hamiltonian Neural ODE (CH-NODE) is provided. We can see that classifier for a vanilla ODE has less margins (top-left) as compared to a CH-NODE (bottom-left). Moreover, from the perturbation analysis, for the vanilla ODE (top-right), we can see that a small ball (purple ball) around a nominal train poits maps to sets (organge ellipsoids) that may cross the decision hyperplane and this mis-classify. On the other hand, for the CH-NODE, the orange sets remain on the one side of the hyperplabe (bottom-right). This explains that, indeed, contractive Neural ODEs are more robust than vanilla ODEs. The dynamics of vanilla NODE are given as 
-$\xi$
+
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
 <p align="center">
 <img src="./Figures/boundary_vanilla.png" alt="Class_vanilla" width="400"/>
