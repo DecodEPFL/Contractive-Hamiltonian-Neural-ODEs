@@ -36,7 +36,7 @@ where x is the input.
 
 The data set is generate by 
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math={\color{white} [x,y] = [r cos(\theta), r sin(\theta)], \text{where} \ \theta = \frac{i}{3} \pi, \text{for} i = 1,2,3}"/>
+<img src="https://render.githubusercontent.com/render/math?math={\color{white} [x,y] = [r cos(\theta), r sin(\theta)], \text{where} \ \theta = \frac{i}{3} \pi, \text{for} \ i = 1,2,3}"/>
 </p>
 We selected r = 2 and r = 4 for crosses and circles, respectively. 
 
