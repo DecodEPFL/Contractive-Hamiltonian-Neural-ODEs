@@ -36,7 +36,7 @@ where x is the input.
 
 The data set is generate by 
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math={\color{white} \theta = \frac{i}{3} \pi}"/>
+<img src="https://render.githubusercontent.com/render/math?math={\color{white} [x,y] = [r cos(\theta), r sin(\theta)], \text{where, }\theta = \frac{i}{3} \pi}"/>
 </p>
 
 <p align="center">
