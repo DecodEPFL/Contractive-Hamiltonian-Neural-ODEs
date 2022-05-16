@@ -34,6 +34,11 @@ The dynamics of vanilla NODE are given as
 
 where x is the input. 
 
+The data set is generate by 
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math={\color{white} \theta = \frac{i}{3} \pi}"/>
+</p>
+
 <p align="center">
 <img src="./Figures/boundary_vanilla.png" alt="Class_vanilla" width="400"/>
 <img src="./Figures/flow_vanilla.png" alt="flow_vanilla" width="400"/>
